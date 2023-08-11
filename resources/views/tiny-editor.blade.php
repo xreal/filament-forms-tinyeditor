@@ -28,7 +28,7 @@
                         convert_urls: {{ $getConvertUrls() ? 'true' : 'false' }},
                         branding: false,
                         external_plugins: {
-		                    'file-manager': 'https://raw.githubusercontent.com/edsdk/flmngr-tinymce/master/file-manager/plugin.js'
+		                    'file-manager': 'https://cdn.jsdelivr.net/gh/edsdk/flmngr-tinymce/file-manager/plugin.js'
 	                    },
                         images_upload_handler: (blobInfo, success, failure, progress) => {
                             if (!blobInfo.blob()) return
