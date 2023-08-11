@@ -28,7 +28,6 @@ class FilamentFormsTinyeditorServiceProvider extends PackageServiceProvider
     {
         FilamentAsset::register([
             Js::make('tinymce', 'https://cdn.jsdelivr.net/npm/tinymce@5.10.7/tinymce.min.js'),
-            Js::make('flmngr', __DIR__.'/../resources/dist/js/flmngr.js),
             Js::make('tiny-editor', __DIR__.'/../resources/dist/js/tiny-editor.js'),
             Js::make('tinymce-lang-de', 'https://cdn.jsdelivr.net/npm/tinymce-i18n@23.7.24/langs5/de.min.js')->loadedOnRequest(),            
         ], package: 'mohamedsabil83/filament-forms-tinyeditor');
