@@ -24,6 +24,13 @@ return [
             'upload_directory' => null,
         ],
 
+        'new' => [
+            'plugins' => 'autoresize directionality emoticons link wordcount file-manager',
+            'toolbar' => 'removeformat | bold italic | rtl ltr | link emoticons',
+            'upload_directory' => null,
+        ],
+
+
         'template' => [
             'plugins' => 'autoresize template',
             'toolbar' => 'template',
