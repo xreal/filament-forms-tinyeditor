@@ -17,11 +17,6 @@
                         language_url: 'https://cdn.jsdelivr.net/npm/tinymce-i18n@23.7.24/langs5/{{ $getInterfaceLanguage() }}.min.js',
                         toolbar_sticky: {{ $getToolbarSticky() ? 'true' : 'false' }},
                         toolbar_sticky_offset: 64,
-                        skin: {
-                            light: 'oxide',
-                            dark: 'oxide-dark',
-                            system: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oxide-dark' : 'oxide',
-                        }[theme] || 'oxide',
                         max_height: {{ $getMaxHeight() }},
                         min_height: {{ $getMinHeight() }},
                         menubar: {{ $getShowMenuBar() ? 'true' : 'false' }},
@@ -32,6 +27,9 @@
                         remove_script_host: {{ $getRemoveScriptHost() ? 'true' : 'false' }},
                         convert_urls: {{ $getConvertUrls() ? 'true' : 'false' }},
                         branding: false,
+                        external_plugins: {
+		                    "file-manager": "https://raw.githubusercontent.com/edsdk/flmngr-tinymce/master/file-manager/plugin.js"
+	                    },
                         images_upload_handler: (blobInfo, success, failure, progress) => {
                             if (!blobInfo.blob()) return
 
